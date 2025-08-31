@@ -82,12 +82,12 @@ function App() {
       await onDeposit();
       setTransactionStatus({
         type: 'success',
-        message: 'Successfully Deposited '+deposit_amount+' XFI tokens',
+        message: 'Successfully Deposited '+deposit_amount+' FLR tokens',
       });
     } catch (error) {
       setTransactionStatus({
         type: 'error',
-        message: 'Failed to Deposit XFI Tokens.',
+        message: 'Failed to Deposit FLR Tokens.',
       });
     }
   };
@@ -116,12 +116,12 @@ function App() {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                  <Vote className="w-6 h-6 text-white" />
+                <div className="w-10 h-10 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center">
+                  <Coins className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h1 className="text-xl font-bold text-gray-900">FLR-Safe</h1>
-                  <p className="text-sm text-gray-600">Earn reward on your deposit</p>
+                  <h1 className="text-xl font-bold text-gray-900">ChainNest</h1>
+                  <p className="text-sm text-gray-600">Save and earn yield on your deposits</p>
                 </div>
               </div>
             </div>
@@ -148,10 +148,10 @@ function App() {
         {/* Hero Section */}
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Save your <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">XFI Tokens</span>
+            Save your <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">FLR Tokens</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-           Earn a 5% annual reward by securely saving your XFI tokens on the Cross Finance.
+           Earn a 5% annual reward by securely saving your FLR tokens on the Cross Finance.
           </p>
         </div>
 

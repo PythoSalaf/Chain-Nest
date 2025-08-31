@@ -121,7 +121,7 @@ export const useDelegationContract = (signer: ethers.JsonRpcSigner | null) => {
       return tx;
       
     } catch (error) {
-      console.error('Error Depositing XFI Tokens:', error);
+      console.error('Error Depositing FLR Tokens:', error);
       throw error;
     } finally {
       setLoading(false);

@@ -37,19 +37,19 @@ export const DepositForm: React.FC<DepositFormProps> = ({
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
-      <h3 className="text-xl font-semibold text-gray-900 mb-6 flex items-center">
-        <Send className="w-6 h-6 mr-2 text-green-600" />
+    <div className="bg-green-900 rounded-xl shadow-lg p-6 border border-green-400">
+      <h3 className="text-xl font-semibold text-green-200 mb-6 flex items-center">
+        <Send className="w-6 h-6 mr-2 text-green-300" />
         Deposit your FLR Tokens
       </h3>
 
-      <div className="flex space-x-1 mb-6 bg-gray-100 p-1 rounded-lg">
+      <div className="flex space-x-1 mb-6 bg-green-800 p-1 rounded-lg">
         <button
           onClick={() => setSelectedTab('self')}
           className={`flex-1 py-2 px-4 rounded-md font-medium transition-colors ${
             selectedTab === 'self'
-              ? 'bg-white text-blue-600 shadow-sm'
-              : 'text-gray-600 hover:text-gray-900'
+              ? 'bg-green-400 text-gray-900 shadow-sm'
+              : 'text-green-300 hover:text-green-200'
           }`}
         >
           <Coins className="w-4 h-4 inline mr-2" />
@@ -59,8 +59,8 @@ export const DepositForm: React.FC<DepositFormProps> = ({
           onClick={() => setSelectedTab('custom')}
           className={`flex-1 py-2 px-4 rounded-md font-medium transition-colors ${
             selectedTab === 'custom'
-              ? 'bg-white text-blue-600 shadow-sm'
-              : 'text-gray-600 hover:text-gray-900'
+              ? 'bg-green-400 text-gray-900 shadow-sm'
+              : 'text-green-300 hover:text-green-200'
           }`}
         >
           <Target className="w-4 h-4 inline mr-2" />
@@ -70,17 +70,17 @@ export const DepositForm: React.FC<DepositFormProps> = ({
 
       {selectedTab === 'self' && (
         <div className="space-y-4">
-          <div className="p-4 bg-blue-50 rounded-lg">
-            <p className="text-blue-800 font-medium mb-2">Enter FLR amount to deposit</p>
-            <input type="number" className="pl-[8px] space-y-4 text-gray-800 border-2 border-blue-500 focus:border-blue-500 focus:outline-none
-             rounded-md py-1 text-lg mb-4" placeholder='2 FLR' onChange={(e)=>{setDepositAmount(e.target.value)}} />
+          <div className="p-4 bg-green-100 rounded-lg">
+            <p className="text-gray-900 font-medium mb-2">Enter FLR amount to deposit</p>
+            <input type="number" className="pl-[8px] space-y-4 text-gray-900 border-2 border-green-500 focus:border-green-600 focus:outline-none
+             rounded-md py-1 text-lg mb-4 bg-white" placeholder='2 FLR' onChange={(e)=>{setDepositAmount(e.target.value)}} />
            
           </div>
           
           <button
             onClick={onDeposit}
             disabled={loading}
-            className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 disabled:from-gray-400 disabled:to-gray-500 text-white font-medium py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 disabled:scale-100 flex items-center justify-center"
+            className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 disabled:from-gray-700 disabled:to-gray-800 text-white font-medium py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 disabled:scale-100 flex items-center justify-center"
           >
             {loading ? 'Depositing...' : 'Deposit'}
           </button>
@@ -89,10 +89,10 @@ export const DepositForm: React.FC<DepositFormProps> = ({
 
       {selectedTab === 'custom' && (
         <form onSubmit={inititate} className="space-y-4">
-          <div className="p-4 bg-orange-50 rounded-lg">
-            <p className="text-orange-800 font-medium mb-2">Enter Withdraw Amount</p>
-            <p className="text-orange-600 text-sm">
-              <span className="text-red-500 font-[800]">Note</span> The yield will subsequently be calculated for the unwithdrawn balance
+          <div className="p-4 bg-green-100 rounded-lg">
+            <p className="text-gray-900 font-medium mb-2">Enter Withdraw Amount</p>
+            <p className="text-gray-700 text-sm">
+              <span className="text-green-700 font-[800]">Note</span> The yield will subsequently be calculated for the unwithdrawn balance
             </p>
           </div>
           
@@ -108,18 +108,18 @@ export const DepositForm: React.FC<DepositFormProps> = ({
               onChange={(e) => setAmount(e.target.value)}
               placeholder="2 FLR"
              // className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors font-mono text-sm"
-            className="pl-[8px] space-y-4 text-gray-800 border-2 border-blue-500 focus:border-blue-500 focus:outline-none
-             rounded-md py-1 text-lg mb-2"
+            className="pl-[8px] space-y-4 text-gray-900 border-2 border-green-500 focus:border-green-600 focus:outline-none
+             rounded-md py-1 text-lg mb-2 bg-white"
             />
             {amount && (
-              <p className="text-red-600 text-sm">Enter value below {}## FLR</p>
+              <p className="text-green-300 text-sm">Enter value below {}## FLR</p>
             )}
           </div>
           
           <button
             type="submit"
             disabled={Number(amount) <= 0 || loading}
-            className="w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 disabled:from-gray-400 disabled:to-gray-500 text-white font-medium py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 disabled:scale-100 flex items-center justify-center"
+            className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 disabled:from-gray-700 disabled:to-gray-800 text-white font-medium py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 disabled:scale-100 flex items-center justify-center"
           >
             <Target className="w-5 h-5 mr-2" />
             {loading ? 'Intiating...' : 'Initiate Withdraw'}

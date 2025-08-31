@@ -109,19 +109,19 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-black">
       {/* Header */}
-      <header className="bg-white/80 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
+      <header className="bg-green-900/95 backdrop-blur-sm border-b border-green-400 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
               <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center">
-                  <Coins className="w-6 h-6 text-white" />
+                <div className="w-10 h-10 bg-gradient-to-r from-green-400 to-green-500 rounded-lg flex items-center justify-center">
+                  <Coins className="w-6 h-6 text-gray-900" />
                 </div>
                 <div>
-                  <h1 className="text-xl font-bold text-gray-900">ChainNest</h1>
-                  <p className="text-sm text-gray-600">Save and earn yield on your deposits</p>
+                  <h1 className="text-xl font-bold text-green-200">ChainNest</h1>
+                  <p className="text-sm text-green-300">Save and earn yield on your deposits</p>
                 </div>
               </div>
             </div>
@@ -134,7 +134,7 @@ function App() {
             style={{display: account ? 'flex' : 'none'}}
             onClick={disconnect}
             disabled={isConnecting}
-            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:from-gray-400 disabled:to-gray-500 text-white font-medium py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 disabled:scale-100"
+            className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 disabled:from-gray-700 disabled:to-gray-800 text-white font-medium py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 disabled:scale-100"
           >
             {!isConnecting ? 'Disconnect' : 'Disconnecting...'}
           </button>
@@ -147,10 +147,10 @@ function App() {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Hero Section */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Save your <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">FLR Tokens</span>
+          <h2 className="text-4xl font-bold text-white mb-4">
+            Save your <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-500">FLR Tokens</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
            Earn a 5% annual reward by securely saving your FLR tokens on the Cross Finance.
           </p>
         </div>
@@ -172,13 +172,13 @@ function App() {
           </div>
         )}
 
-        <div className="flex space-x-4 justify-around mb-6 bg-gray-100 p-1 rounded-lg">
+        <div className="flex space-x-4 justify-around mb-6 bg-green-900 p-1 rounded-lg border border-green-700">
                 <div
-                  className={`flex py-2 px-4 align-center rounded-md font-medium transition-colors bg-white text-blue-600 shadow-sm'`}>
+                  className={`flex py-2 px-4 align-center rounded-md font-medium transition-colors bg-green-800 text-white shadow-sm'`}>
                  
-                  <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 
-                  to-purple-600">
-                  In Stake: <span className=" font-bold text-gray-900 mb-4"> {Stake ? Number(formatEther(Stake)).toFixed(3) : ".."} FLR </span>
+                  <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 
+                  to-green-300">
+                  In Stake: <span className=" font-bold text-white mb-4"> {Stake ? Number(formatEther(Stake)).toFixed(3) : ".."} FLR </span>
                 </h3>
 
                 </div>
@@ -281,14 +281,7 @@ function App() {
         )}
 
         {/* Footer */}
-        <footer className="text-center py-8 border-t border-gray-200 mt-16">
-          <p className="text-gray-600">
-            Built for the Cross Finance community.
-          </p>
-          <p className="text-sm text-gray-500 mt-2">
-            Contract Address: <a className="text-green-500" href="https://test.xfiscan.com/address/0xc753e7cb4cc1f26c0bcc363d2106d22690579f53">0xc7...9f53</a>
-          </p>
-        </footer>
+        
       </main>
     </div>
   );

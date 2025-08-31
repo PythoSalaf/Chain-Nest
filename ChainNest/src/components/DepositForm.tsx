@@ -40,7 +40,7 @@ export const DepositForm: React.FC<DepositFormProps> = ({
     <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
       <h3 className="text-xl font-semibold text-gray-900 mb-6 flex items-center">
         <Send className="w-6 h-6 mr-2 text-green-600" />
-        Deposit your XFI Tokens
+        Deposit your FLR Tokens
       </h3>
 
       <div className="flex space-x-1 mb-6 bg-gray-100 p-1 rounded-lg">
@@ -71,9 +71,9 @@ export const DepositForm: React.FC<DepositFormProps> = ({
       {selectedTab === 'self' && (
         <div className="space-y-4">
           <div className="p-4 bg-blue-50 rounded-lg">
-            <p className="text-blue-800 font-medium mb-2">Enter XFI amount to deposit</p>
+            <p className="text-blue-800 font-medium mb-2">Enter FLR amount to deposit</p>
             <input type="number" className="pl-[8px] space-y-4 text-gray-800 border-2 border-blue-500 focus:border-blue-500 focus:outline-none
-             rounded-md py-1 text-lg mb-4" placeholder='2 XFI' onChange={(e)=>{setDepositAmount(e.target.value)}} />
+             rounded-md py-1 text-lg mb-4" placeholder='2 FLR' onChange={(e)=>{setDepositAmount(e.target.value)}} />
            
           </div>
           
@@ -106,13 +106,13 @@ export const DepositForm: React.FC<DepositFormProps> = ({
               id="amount"
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
-              placeholder="2 XFI"
+              placeholder="2 FLR"
              // className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors font-mono text-sm"
             className="pl-[8px] space-y-4 text-gray-800 border-2 border-blue-500 focus:border-blue-500 focus:outline-none
              rounded-md py-1 text-lg mb-2"
             />
             {amount && (
-              <p className="text-red-600 text-sm">Enter value below {}## XFI</p>
+              <p className="text-red-600 text-sm">Enter value below {}## FLR</p>
             )}
           </div>
           
